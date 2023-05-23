@@ -10,7 +10,7 @@ inventory = {}
 # Fish lists
 common_fish = ['숭어', '붕어', '우럭', '참돔', '연어', '송어', '청어', '넙', '고등어', '멸치', '새우', '가물치', '가멸치', '송사리', '가을치', '가멸치', '참비늘 숭어']
 rare_fish = ['장어', '복어', '참치치', '쏠베감펭', '곰치', '무지게 송어', '핑거 쉬림프', '레드테일 캣피쉬']
-super_rare_fish = ['stingrays', 'dolphins', 'anglerfish', 'sturgeon', 'vampire squid', 'oarfish', 'Napoleon fish']
+super_rare_fish = ['가오', 'dolphins', 'anglerfish', 'sturgeon', 'vampire squid', 'oarfish', 'Napoleon fish']
 epic_fish = ['giant sea bass', 'barracuda', 'dorado', 'dumbo octopus', 'snakehead', 'sea turtle']
 legendary_fish = ['mackerel', 'tiger shark', 'tarpon', 'sailfish', 'marlin', 'arowana']
 mythic_fish = ['sunfish', 'whale shark', 'great white shark', 'killer whale', 'giant squid']
