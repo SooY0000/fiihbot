@@ -30,7 +30,7 @@ async def fish(ctx):
     mythic_chance = 0.0014
 
     catch_count = 1
-    message = f'{ctx.author.mention} You caught: '
+    message = f'{ctx.author.mention} 물고기를 잡았습니다!: '
 
     if random.random() <= 0.12:
         catch_count = 2
