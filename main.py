@@ -3,7 +3,7 @@ import discord
 from discord.ext import commands
 import json
 
-bot = commands.Bot(command_prefix='!')
+bot = commands.Bot(command_prefix='!') 
 
 # Inventory dictionary to store the user's caught fish
 inventory = {}
