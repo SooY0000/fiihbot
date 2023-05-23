@@ -30,17 +30,17 @@ async def fish(ctx):
     mythic_chance = 0.0014
 
     catch_count = 1
-    message = f'{ctx.author.mention} You caught: '
+    message = f'{ctx.author.mention} 물고기를 잡았습니다!: '
 
     if random.random() <= 0.12:
         catch_count = 2
-        message += '2 fish! '
+        message += '2마리! '
     elif random.random() <= 0.07:
         catch_count = 3
-        message += '3 fish! '
+        message += '3마리! '
     elif random.random() <= 0.01:
         catch_count = 4
-        message += '4 fish! '
+        message += '4마리!! '
 
     for _ in range(catch_count):
         fish_type = 'common'
@@ -81,39 +81,39 @@ async def fish(ctx):
 async def view_inventory(ctx):
     if ctx.author.id in inventory and inventory[ctx.author.id]:
         inventory_stack = {
-            'common': [],
-            'rare': [],
-            'super rare': [],
-            'epic': [],
-            'legendary': [],
-            'mythic': []
+            '커몬': [],
+            '레어': [],
+            '슈퍼 레어': [],
+            '에픽': [],
+            '레전더리': [],
+            '미틱': []
         }
 
         for fish, count in inventory[ctx.author.id].items():
             if fish in common_fish:
-                inventory_stack['common'].append((fish, count))
+                inventory_stack['커몬'].append((fish, count))
             elif fish in rare_fish:
-                inventory_stack['rare'].append((fish, count))
+                inventory_stack['레어'].append((fish, count))
             elif fish in super_rare_fish:
-                inventory_stack['super rare'].append((fish, count))
+                inventory_stack['슈퍼 레어'].append((fish, count))
             elif fish in epic_fish:
-                inventory_stack['epic'].append((fish, count))
+                inventory_stack['에픽'].append((fish, count))
             elif fish in legendary_fish:
-                inventory_stack['legendary'].append((fish, count))
+                inventory_stack['레전더리'].append((fish, count))
             else:
-                inventory_stack['mythic'].append((fish, count))
+                inventory_stack['미틱'].append((fish, count))
 
-        embed = discord.Embed(title=f"{ctx.author.name}'s Inventory", color=discord.Color.blurple())
+        embed = discord.Embed(title=f"{ctx.author.name}님의 인벤토리", color=discord.Color.blurple())
         for rarity, fish_list in inventory_stack.items():
             if fish_list:
                 value = '\n'.join([f'{fish}: {count}' for fish, count in fish_list])
                 embed.add_field(name=rarity.capitalize(), value=value, inline=False)
 
-        embed.set_footer(text="Fish Inventory")
+        embed.set_footer(text="물고기 창고")
 
         await ctx.send(embed=embed)
     else:
-        await ctx.send(f'{ctx.author.mention} Your inventory is empty.')
+        await ctx.send(f'{ctx.author.mention} 인벤토리가 비었습니다.')
 
 
 # Replace 'TOKEN' with your actual bot token
